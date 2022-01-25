@@ -8,5 +8,11 @@
 
 body,
 html {
-  background: linear-gradient(45deg, blue, red);
+  height: 100vh;
+  background: linear-gradient(32deg, rgb(174, 174, 231), rgb(243, 173, 173));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 100;
+  overflow-x: hidden;
 }
