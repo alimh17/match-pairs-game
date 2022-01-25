@@ -13,7 +13,7 @@ export const generator = () => {
   }
 
   finishSet.map((item, index) => {
-    item.push(data[index]);
+    return item.push(data[index]);
   });
 
   return finishSet;
