@@ -17,12 +17,14 @@ const ThirdRow = ({
   const Ref = useRef(null);
   const [thirdValues, setThirdValue] = useState([]);
 
-  let preventErr;
+  let preventErr = false;
   if (
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    preventErr = true;
+    setTimeout(() => {
+      preventErr = true;
+    }, 200);
   } else {
     preventErr = false;
   }

@@ -24,12 +24,12 @@ function App() {
         return test;
       });
 
-      const result = matchValues.map((item) => {
+      const result = matchValues.map((item, index) => {
         if (
           (item[0] === check[0] && item[1] === check[1]) ||
           (item[1] === check[0] && item[0] === check[1])
         ) {
-          setCheck([null, null]);
+          setCheck([1, 1]);
           return item;
         } else {
           setTimeout(() => {
