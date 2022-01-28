@@ -53,28 +53,68 @@ const SecondRow = ({
         id="4"
         onClick={(e) => preventErr && handleCheckValues(e)}
       >
-        {condition[4] && <img alt="" src={secondValue[0]} id="4" />}
+        {condition[4] ? (
+          <img alt="" src={secondValue[0]} id="4" />
+        ) : (
+          <img
+            alt=""
+            className="0"
+            src={process.env.PUBLIC_URL + "/images/times.png"}
+            id="4"
+            onClick={(e) => preventErr && handleCheckValues(e)}
+          />
+        )}
       </div>
       <div
         className="item 1"
         id="5"
         onClick={(e) => preventErr && handleCheckValues(e)}
       >
-        {condition[5] && <img alt="" src={secondValue[1]} id="5" />}
+        {condition[5] ? (
+          <img alt="" src={secondValue[1]} id="5" />
+        ) : (
+          <img
+            alt=""
+            className="1"
+            src={process.env.PUBLIC_URL + "/images/times.png"}
+            id="5"
+            onClick={(e) => preventErr && handleCheckValues(e)}
+          />
+        )}
       </div>
       <div
         className="item 2"
         id="6"
         onClick={(e) => preventErr && handleCheckValues(e)}
       >
-        {condition[6] && <img alt="" src={secondValue[2]} id="6" />}
+        {condition[6] ? (
+          <img alt="" src={secondValue[2]} id="6" />
+        ) : (
+          <img
+            alt=""
+            className="2"
+            src={process.env.PUBLIC_URL + "/images/times.png"}
+            id="6"
+            onClick={(e) => preventErr && handleCheckValues(e)}
+          />
+        )}
       </div>
       <div
         className="item 3"
         id="7"
         onClick={(e) => preventErr && handleCheckValues(e)}
       >
-        {condition[7] && <img alt="" src={secondValue[3]} id="6" />}
+        {condition[7] ? (
+          <img alt="" src={secondValue[3]} id="6" />
+        ) : (
+          <img
+            alt=""
+            className="3"
+            src={process.env.PUBLIC_URL + "/images/times.png"}
+            id="7"
+            onClick={(e) => preventErr && handleCheckValues(e)}
+          />
+        )}
       </div>
     </div>
   );

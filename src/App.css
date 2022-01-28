@@ -47,14 +47,10 @@
   animation: showAnim 2s;
 }
 
-.setDefalutAnim {
-  animation: hideAnim 2s;
-}
-
 .item > img {
   width: 100%;
   height: 100%;
-  
+  animation: showAnim 2s;
 }
 
 @keyframes showAnim {
