@@ -29,7 +29,7 @@ function App() {
           (item[0] === check[0] && item[1] === check[1]) ||
           (item[1] === check[0] && item[0] === check[1])
         ) {
-          setCheck([1, 1]);
+          setCheck([20, 20]);
           return item;
         } else {
           setTimeout(() => {
