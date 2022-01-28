@@ -21,9 +21,7 @@ const SecondRow = ({
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    setTimeout(() => {
-      preventErr = true;
-    }, 200);
+    preventErr = true;
   } else {
     preventErr = false;
   }
@@ -37,6 +35,10 @@ const SecondRow = ({
     const hasClass = e.target.className.slice(-1);
     const socondElement = Ref.current.children[hasClass];
     socondElement.className = `setAnim item ${hasClass}`;
+
+    setTimeout(() => {
+      socondElement.className = `item ${hasClass}`;
+    }, 2000);
 
     const result = setConditionsHelperTwo(condition, e);
     setCondition(result);

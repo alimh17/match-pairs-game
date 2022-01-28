@@ -22,9 +22,7 @@ const ThirdRow = ({
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    setTimeout(() => {
-      preventErr = true;
-    }, 200);
+    preventErr = true;
   } else {
     preventErr = false;
   }
@@ -38,6 +36,10 @@ const ThirdRow = ({
     const hasClass = e.target.className.slice(-1);
     const thirdElement = Ref.current.children[hasClass];
     thirdElement.className = `setAnim item ${hasClass}`;
+
+    setTimeout(() => {
+      thirdElement.className = `item ${hasClass}`;
+    }, 2000);
 
     const result = setConditionsHelperThree(condition, e);
     setCondition(result);

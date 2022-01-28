@@ -21,9 +21,7 @@ const FiveRow = ({
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    setTimeout(() => {
-      preventErr = true;
-    }, 200);
+    preventErr = true;
   } else {
     preventErr = false;
   }
@@ -37,6 +35,9 @@ const FiveRow = ({
     const hasClass = e.target.className.slice(-1);
     const fiveElement = Ref.current.children[hasClass];
     fiveElement.className = `setAnim item ${hasClass}`;
+    setTimeout(() => {
+      fiveElement.className = `item ${hasClass}`;
+    }, 2000);
 
     const result = setConditionsHelperFive(condition, e);
     setCondition(result);

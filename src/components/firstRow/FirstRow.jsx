@@ -22,9 +22,7 @@ const FirstRow = ({
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    setTimeout(() => {
-      preventErr = true;
-    }, 200);
+    preventErr = true;
   } else {
     preventErr = false;
   }
@@ -36,6 +34,10 @@ const FirstRow = ({
   const handleCheckValues = (e) => {
     const firstElement = Ref.current.children[e.target.id];
     firstElement.className = "setAnim item";
+
+    setTimeout(() => {
+      firstElement.className = "item";
+    }, 2000);
 
     const result = setConditionsHelper(condition, e);
     setCondition(result);

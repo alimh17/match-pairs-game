@@ -22,9 +22,7 @@ const FourRow = ({
     (check[0] === null && check[1] === null) ||
     (typeof check[0] === "number" && check[1] === null)
   ) {
-    setTimeout(() => {
-      preventErr = true;
-    }, 200);
+    preventErr = true;
   } else {
     preventErr = false;
   }
@@ -38,6 +36,10 @@ const FourRow = ({
     const hasClass = e.target.className.slice(-1);
     const fourElement = Ref.current.children[hasClass];
     fourElement.className = `setAnim item ${hasClass}`;
+
+    setTimeout(() => {
+      fourElement.className = `item ${hasClass}`;
+    }, 2000);
 
     const result = setConditionsHelperFour(condition, e);
     setCondition(result);
